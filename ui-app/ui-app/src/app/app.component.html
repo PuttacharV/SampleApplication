@@ -1,0 +1,27 @@
+
+ <mat-toolbar color="primary">
+    <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-drawer-container class="example-container" [hasBackdrop]="false">
+    <mat-drawer #drawer [mode]="'side'">
+        MENU ITEMS WILL GO HERE
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>      
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+<!-- <mat-sidenav-container class="example-container" *ngIf="shouldRun">
+    <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+    <mat-sidenav-content>Main content</mat-sidenav-content>
+</mat-sidenav-container> -->
